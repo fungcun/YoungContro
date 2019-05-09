@@ -13,5 +13,7 @@ use Framework\Model;
 
 class LoginModel extends Model
 {
+    public function check($data){
 
+    }
 }

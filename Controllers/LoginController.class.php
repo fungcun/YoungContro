@@ -10,13 +10,14 @@ namespace Controllers;
 
 
 use Framework\Controller;
+use Models\LoginModel;
 
 class LoginController extends Controller
 {
     public $login;
     public function __construct(){
         //创建 LoginModel 对象
-//        $this->login = new
+        $this->login = new LoginModel();
     }
 
     //加载登陆界面的方法
@@ -29,8 +30,9 @@ class LoginController extends Controller
     //检查登陆的方法
     public function check(){
         //1.接收数据
-        $admindate = $_POST;
+        $admindata = $_POST;
         //2.调用模型处理数据
+        $this->login->check($admindata);
         //3.加载视图文件
     }
 

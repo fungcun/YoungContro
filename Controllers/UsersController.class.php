@@ -26,9 +26,9 @@ class UsersController extends Controller {
 
     public function save(){
         //1.接受数据
-        $useradd = $_POST;
+        $userdata = $_POST;
         //2.调用模型处理数据
-        $r = $this->user->add($useradd);
+        $r = $this->user->add($userdata);
         //结果集判断
         if($r){
             T::jump("注册成功！","index.php?c=Users&a=list");
@@ -41,6 +41,6 @@ class UsersController extends Controller {
         //2.调用模型处理数据
         $res = $this->user->list();
         //3.加载视图文件
-        require './Views/users/list.html';
+        $this->display("users/list");
     }
 }

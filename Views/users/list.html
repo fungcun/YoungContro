@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1" cellpadding="0" cellspacing="0" width="800px" align="center">
+    <tr>
+        <th>用户名</th>
+        <th>性别</th>
+        <th>年龄</th>
+        <th>联系电话</th>
+        <th>邮箱</th>
+        <th>住址</th>
+    </tr>
+    <?php foreach($res as $rows): ?>
+    <tr>
+        <td><?=$rows['username']?></td>
+        <td><?=$rows['usersex']?></td>
+        <td><?=$rows['userage']?></td>
+        <td><?=$rows['usertel']?></td>
+        <td><?=$rows['usermail']?></td>
+        <td><?=$rows['useraddress']?></td>
+    </tr>
+    <?php endforeach; ?>
+</table>
+</body>
+</html>

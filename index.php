@@ -1,6 +1,8 @@
 <?php
 //设置字符集
 header('Content-Type:text/html;charset=utf-8');
+
+//加载配置文件
 require './Conf/conf.php';
 
 //获得方法 和 控制器
